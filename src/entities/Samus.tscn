@@ -1,0 +1,1329 @@
+[gd_scene format=3 uid="uid://cebamdip1vp73"]
+
+[ext_resource type="Texture2D" uid="uid://clexmu0sjh7ty" path="res://assets/samus/Turn around (standing)/3.png" id="1"]
+[ext_resource type="Script" uid="uid://btxd2nvmr3umr" path="res://src/entities/Samus.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dul0pil068p2y" path="res://assets/samus/stand_left.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://fjaa2ewhvb0j" path="res://assets/samus/run_left.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://x4jvrpytogvx" path="res://assets/samus/Turn around (standing)/6.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c2ef30rt2s0nx" path="res://assets/samus/Turn around (standing)/4.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bu7bpqnj5aydp" path="res://assets/samus/spin_left.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://ce3stg7w1o1o4" path="res://assets/samus/Turn around (standing)/5.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bvwtf4bm6pfd0" path="res://assets/samus/Samus test.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cn0f7gre06xaf" path="res://assets/samus/Turn around (standing)/2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bd5k4gcl2c4ka" path="res://assets/samus/Aim/down left.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dh3plgp7wsovo" path="res://assets/samus/Aim/up left.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://y01dhxoholgt" path="res://assets/samus/death/L 08.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://birut4ie0tqfw" path="res://assets/samus/death/L 02.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dhtcdhwmbrfxu" path="res://assets/samus/death/L 07.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://3k7srllgnbri" path="res://assets/samus/death/L 06.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://c2sxlbm3tcihr" path="res://assets/samus/death/L 04.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://cbypfug760i42" path="res://assets/samus/death/L 05.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://c567yaaxve74h" path="res://assets/samus/death/L 01.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://c4oxn5j0hw7q0" path="res://assets/samus/death/L 03.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://b566r0q08yvwk" path="res://assets/samus/death/L 00.png" id="21"]
+[ext_resource type="Shader" uid="uid://syot7ucn71wr" path="res://src/flash_white.gdshader" id="22"]
+[ext_resource type="Texture2D" uid="uid://di1fr00kk7v8m" path="res://assets/samus/aim up run/right/04.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://s166rr1hxs4g" path="res://assets/samus/risefall/right/fall 1.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://bykwk2yharphw" path="res://assets/samus/risefall/fall 3.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://cfklf2pu2pw6e" path="res://assets/samus/risefall/fall 2.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://dlpvy3w1te0yp" path="res://assets/samus/risefall/fall 1.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://berlx7hduf0np" path="res://assets/samus/risefall/rise 3.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://bg6rj7hrux61u" path="res://assets/samus/risefall/rise 1.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://bw33cm1qsfq1u" path="res://assets/samus/morph ball/left 04.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://ufssmmwudax3" path="res://assets/samus/risefall/rise 2.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://ctnfwhguoiisa" path="res://assets/samus/aim up run/03.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://bitwg6i1omgxp" path="res://assets/samus/aim up run/01.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://c87dq7wdwaqwx" path="res://assets/samus/aim up run/02.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://cs4mbp5yr4uxl" path="res://assets/samus/aim up run/05.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://ds3sgxm47y2h2" path="res://assets/samus/aim up run/right/10.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://cp3u24diea3df" path="res://assets/samus/aim up run/07.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://c4djfu4o207ko" path="res://assets/samus/aim up run/08.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://cltm8l538q0f2" path="res://assets/samus/aim up run/09.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://b64vibjghxebh" path="res://assets/samus/aim up run/10.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://dds7n2lf6m6ln" path="res://assets/samus/aim down run/02.png" id="41"]
+[ext_resource type="Texture2D" uid="uid://cjqapcq0soiq3" path="res://assets/samus/aim down run/06.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://bck64axy1ep8b" path="res://assets/samus/aim up run/right/01.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://bvrmmjtvqao7p" path="res://assets/samus/aim down run/08.png" id="44"]
+[ext_resource type="Texture2D" uid="uid://difcv0gm4sr7e" path="res://assets/samus/aim down run/09.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://dlu04h1iq2t3" path="res://assets/samus/aim down run/10.png" id="46"]
+[ext_resource type="Texture2D" uid="uid://de4klejnv7hkx" path="res://assets/samus/aim down run/01.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://bex47vq3k6ffk" path="res://assets/samus/aim down run/04.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://5v06w6n7uk04" path="res://assets/samus/aim down run/03.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://58307edc8vcq" path="res://assets/samus/aim down run/05.png" id="50"]
+[ext_resource type="Texture2D" uid="uid://dgd7ehcyew173" path="res://assets/samus/aim up standing left.png" id="51"]
+[ext_resource type="Script" uid="uid://b021f06gyevyx" path="res://src/entities/ScreenShake.gd" id="52"]
+[ext_resource type="Texture2D" uid="uid://cvunsmsidm7qa" path="res://assets/samus/crouch/3.png" id="53"]
+[ext_resource type="Texture2D" uid="uid://cceoan7l5b8f1" path="res://assets/samus/crouch/2.png" id="54"]
+[ext_resource type="Texture2D" uid="uid://rj15rddwfry2" path="res://assets/samus/crouch/1.png" id="55"]
+[ext_resource type="Texture2D" uid="uid://b5mh5s66w4dfc" path="res://assets/samus/crouch turn/3.png" id="56"]
+[ext_resource type="Texture2D" uid="uid://bkrlv7msnwv6g" path="res://assets/samus/crouch turn/2.png" id="57"]
+[ext_resource type="Texture2D" uid="uid://ugddrw2m33jf" path="res://assets/samus/crouch turn/1.png" id="58"]
+[ext_resource type="Texture2D" uid="uid://bkwde6lqchl8o" path="res://assets/samus/crouch aim/crouch aim side down.png" id="59"]
+[ext_resource type="Texture2D" uid="uid://cq8xocup01r4d" path="res://assets/samus/crouch aim/crouch aim up.png" id="60"]
+[ext_resource type="Texture2D" uid="uid://btb1vru8joyrx" path="res://assets/samus/crouch aim/crouch aim side up.png" id="61"]
+[ext_resource type="Texture2D" uid="uid://ccp4swqojp1rd" path="res://assets/samus/crouch/right/2.png" id="62"]
+[ext_resource type="Texture2D" uid="uid://dp3conve34dhx" path="res://assets/samus/crouch/right/1.png" id="63"]
+[ext_resource type="Texture2D" uid="uid://daokj1o53vddm" path="res://assets/samus/aim down run/right/03.png" id="64"]
+[ext_resource type="Texture2D" uid="uid://dpdevuboaoqkm" path="res://assets/samus/aim up standing right.png" id="65"]
+[ext_resource type="Texture2D" uid="uid://bgvesetbhv4gv" path="res://assets/samus/aim up run/right/03.png" id="66"]
+[ext_resource type="Texture2D" uid="uid://21v58x0py1vc" path="res://assets/samus/crouch aim/right/aim up.png" id="67"]
+[ext_resource type="Texture2D" uid="uid://bsinurkx1rieu" path="res://assets/samus/Aim/up right.png" id="68"]
+[ext_resource type="Texture2D" uid="uid://b384c7s2kbaba" path="res://assets/samus/aim up run/right/02.png" id="69"]
+[ext_resource type="Texture2D" uid="uid://ie0hkiwopbwe" path="res://assets/samus/aim down run/right/04.png" id="70"]
+[ext_resource type="Texture2D" uid="uid://ceob2y4eccdop" path="res://assets/samus/Aim/down rigt.png" id="71"]
+[ext_resource type="Texture2D" uid="uid://cy4juj6574xhs" path="res://assets/samus/aim up run/04.png" id="72"]
+[ext_resource type="Texture2D" uid="uid://b3ds1xjtg58bo" path="res://assets/samus/crouch aim/right/aim side up.png" id="73"]
+[ext_resource type="Texture2D" uid="uid://cnynqyo5nph7k" path="res://assets/samus/crouch aim/right/aim down.png" id="74"]
+[ext_resource type="Texture2D" uid="uid://cppsve3a7frsh" path="res://assets/samus/crouch/right/3.png" id="75"]
+[ext_resource type="Texture2D" uid="uid://dy78bm7xge1jm" path="res://assets/samus/aim up run/right/05.png" id="76"]
+[ext_resource type="Texture2D" uid="uid://wmc1tq2ovay2" path="res://assets/samus/aim up run/right/06.png" id="77"]
+[ext_resource type="Texture2D" uid="uid://cpo2u5ieix7vj" path="res://assets/samus/aim up run/06.png" id="78"]
+[ext_resource type="Texture2D" uid="uid://d3i4wq3rhqvwd" path="res://assets/samus/aim down run/right/02.png" id="79"]
+[ext_resource type="Texture2D" uid="uid://bgm2j1051lka8" path="res://assets/samus/aim up run/right/07.png" id="80"]
+[ext_resource type="Texture2D" uid="uid://bxsrfubwxk2u3" path="res://assets/samus/aim up run/right/08.png" id="81"]
+[ext_resource type="Texture2D" uid="uid://ih14prruq4uv" path="res://assets/samus/aim up run/right/09.png" id="82"]
+[ext_resource type="Texture2D" uid="uid://dpvjxlcqxqsxd" path="res://assets/samus/aim down run/right/01.png" id="83"]
+[ext_resource type="Texture2D" uid="uid://dn3pxld5t1ce5" path="res://assets/samus/aim down run/07.png" id="84"]
+[ext_resource type="Texture2D" uid="uid://kf2jdnqyxikd" path="res://assets/samus/aim down run/right/06.png" id="85"]
+[ext_resource type="Texture2D" uid="uid://befrnivt3dt7" path="res://assets/samus/aim down run/right/05.png" id="86"]
+[ext_resource type="Texture2D" uid="uid://uqj7t0bm33cg" path="res://assets/samus/aim down run/right/07.png" id="87"]
+[ext_resource type="Texture2D" uid="uid://v0oyp8c7xjco" path="res://assets/samus/aim down run/right/08.png" id="88"]
+[ext_resource type="Texture2D" uid="uid://c14e0rdgo6vdc" path="res://assets/samus/aim down run/right/10.png" id="89"]
+[ext_resource type="Texture2D" uid="uid://dudgmf8tdlx2i" path="res://assets/samus/aim down run/right/09.png" id="90"]
+[ext_resource type="Texture2D" uid="uid://dua1oojvd82jg" path="res://assets/samus/death/Right/05.png" id="91"]
+[ext_resource type="Texture2D" uid="uid://c3lfursvo3w5y" path="res://assets/samus/death/Right/08.png" id="92"]
+[ext_resource type="Texture2D" uid="uid://0vlekpat3ljq" path="res://assets/samus/death/Right/04.png" id="93"]
+[ext_resource type="Texture2D" uid="uid://cy0g02e5sesbf" path="res://assets/samus/death/Right/07.png" id="94"]
+[ext_resource type="Texture2D" uid="uid://buhe7d7qy1olo" path="res://assets/samus/death/Right/02.png" id="95"]
+[ext_resource type="Texture2D" uid="uid://cqg5jl0yqrkdg" path="res://assets/samus/death/Right/09.png" id="96"]
+[ext_resource type="Texture2D" uid="uid://bsmxx6riw03pr" path="res://assets/samus/death/Right/03.png" id="97"]
+[ext_resource type="Texture2D" uid="uid://6xpal1ah151k" path="res://assets/samus/death/Right/01.png" id="98"]
+[ext_resource type="Texture2D" uid="uid://c0w465swmi8fd" path="res://assets/samus/death/Right/06.png" id="99"]
+[ext_resource type="Texture2D" uid="uid://b7brt6futgr3d" path="res://assets/samus/risefall/right/rise 2.png" id="100"]
+[ext_resource type="Texture2D" uid="uid://da3fdvb4p0ig1" path="res://assets/samus/risefall/right/rise 3.png" id="101"]
+[ext_resource type="Texture2D" uid="uid://caxrecxaqdtyo" path="res://assets/samus/risefall/right/fall 3.png" id="102"]
+[ext_resource type="Texture2D" uid="uid://c8apk1omnifxh" path="res://assets/samus/risefall/right/fall 2.png" id="103"]
+[ext_resource type="Texture2D" uid="uid://bdn2mhnddj1i0" path="res://assets/samus/risefall/right/rise 1.png" id="104"]
+[ext_resource type="Texture2D" uid="uid://cnxnwj62jekfe" path="res://assets/samus/run_right.png" id="105"]
+[ext_resource type="Texture2D" uid="uid://cpivyy2v3ewqg" path="res://assets/samus/spin_right.png" id="106"]
+[ext_resource type="Texture2D" uid="uid://ct2movced767a" path="res://assets/samus/stand_right.png" id="107"]
+[ext_resource type="Texture2D" uid="uid://cqowt3op2jdhr" path="res://assets/samus/morph ball/left 02.png" id="108"]
+[ext_resource type="Texture2D" uid="uid://bq83rfjlkpq0g" path="res://assets/samus/morph ball/right 01.png" id="109"]
+[ext_resource type="Texture2D" uid="uid://c0ap5wogn08t3" path="res://assets/samus/morph ball/left 07.png" id="110"]
+[ext_resource type="Texture2D" uid="uid://drdf3rbrb41jd" path="res://assets/samus/morph ball/left 05.png" id="111"]
+[ext_resource type="Texture2D" uid="uid://cgc0boahk102s" path="res://assets/samus/morph ball/left 06.png" id="112"]
+[ext_resource type="Texture2D" uid="uid://bpbggg4wk6f5s" path="res://assets/samus/morph ball/left 03.png" id="113"]
+[ext_resource type="Texture2D" uid="uid://crq70lmp017v7" path="res://assets/samus/morph ball/left 08.png" id="114"]
+[ext_resource type="Texture2D" uid="uid://b2bt80gyts1wo" path="res://assets/samus/morph ball/right 03.png" id="115"]
+[ext_resource type="Texture2D" uid="uid://c8e6ua7sohxu1" path="res://assets/samus/morph ball/left 01.png" id="116"]
+[ext_resource type="Texture2D" uid="uid://cbra6qe1j4tl5" path="res://assets/samus/morph ball/right 02.png" id="117"]
+[ext_resource type="Texture2D" uid="uid://buy5dsevtygm1" path="res://assets/samus/morph ball/right 04.png" id="118"]
+[ext_resource type="Texture2D" uid="uid://cmvv0yy8dlxgw" path="res://assets/samus/morph ball/right 06.png" id="119"]
+[ext_resource type="Texture2D" uid="uid://bsfnuo7k04p42" path="res://assets/samus/morph ball/right 05.png" id="120"]
+[ext_resource type="Texture2D" uid="uid://5oxarlsdp5j5" path="res://assets/samus/morph ball/right 07.png" id="121"]
+[ext_resource type="Texture2D" uid="uid://dmc6ddevemrnv" path="res://assets/samus/morph ball/right 08.png" id="122"]
+[ext_resource type="Texture2D" uid="uid://bes4cm0ni4vil" path="res://assets/samus/morph ball/transition/right 2.png" id="123"]
+[ext_resource type="Texture2D" uid="uid://4he3obqlcr1g" path="res://assets/samus/morph ball/transition/left 2.png" id="124"]
+[ext_resource type="Texture2D" uid="uid://yrlnyeprsmeu" path="res://assets/samus/morph ball/transition/right 1.png" id="125"]
+[ext_resource type="Texture2D" uid="uid://dsw2cvn7kjvem" path="res://assets/samus/morph ball/transition/left 1.png" id="126"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("22")
+shader_parameter/active = false
+shader_parameter/offset = 0.9
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("3")
+region = Rect2(0, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("3")
+region = Rect2(48, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("3")
+region = Rect2(96, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("3")
+region = Rect2(144, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="14"]
+atlas = ExtResource("4")
+region = Rect2(0, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="15"]
+atlas = ExtResource("4")
+region = Rect2(48, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="16"]
+atlas = ExtResource("4")
+region = Rect2(96, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="17"]
+atlas = ExtResource("4")
+region = Rect2(144, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="18"]
+atlas = ExtResource("4")
+region = Rect2(192, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="19"]
+atlas = ExtResource("4")
+region = Rect2(240, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="20"]
+atlas = ExtResource("4")
+region = Rect2(288, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="21"]
+atlas = ExtResource("4")
+region = Rect2(336, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="22"]
+atlas = ExtResource("4")
+region = Rect2(384, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="23"]
+atlas = ExtResource("4")
+region = Rect2(432, 0, 48, 43)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("7")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource("7")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource("7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="10"]
+atlas = ExtResource("7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="11"]
+atlas = ExtResource("7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="12"]
+atlas = ExtResource("7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="13"]
+atlas = ExtResource("7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46")
+}],
+"loop": true,
+"name": &"aim side down run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40")
+}],
+"loop": true,
+"name": &"aim side up run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51")
+}],
+"loop": false,
+"name": &"aim up standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}],
+"loop": false,
+"name": &"aim_side_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12")
+}],
+"loop": false,
+"name": &"aim_side_up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59")
+}],
+"loop": false,
+"name": &"crouch aim side down",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61")
+}],
+"loop": false,
+"name": &"crouch aim side up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60")
+}],
+"loop": false,
+"name": &"crouch aim up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58")
+}],
+"loop": false,
+"name": &"crouch turn",
+"speed": 35.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21")
+}],
+"loop": true,
+"name": &"death_0",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19")
+}],
+"loop": false,
+"name": &"death_1",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}],
+"loop": false,
+"name": &"death_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25")
+}],
+"loop": false,
+"name": &"falling",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25")
+}],
+"loop": false,
+"name": &"falling turn",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("124")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126")
+}],
+"loop": false,
+"name": &"from morph",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("116")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114")
+}],
+"loop": true,
+"name": &"morph ball",
+"speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9")
+}],
+"loop": false,
+"name": &"neutral",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28")
+}],
+"loop": false,
+"name": &"rising",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28")
+}],
+"loop": false,
+"name": &"rising turn",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("14")
+}, {
+"duration": 1.0,
+"texture": SubResource("15")
+}, {
+"duration": 1.0,
+"texture": SubResource("16")
+}, {
+"duration": 1.0,
+"texture": SubResource("17")
+}, {
+"duration": 1.0,
+"texture": SubResource("18")
+}, {
+"duration": 1.0,
+"texture": SubResource("19")
+}, {
+"duration": 1.0,
+"texture": SubResource("20")
+}, {
+"duration": 1.0,
+"texture": SubResource("21")
+}, {
+"duration": 1.0,
+"texture": SubResource("22")
+}, {
+"duration": 1.0,
+"texture": SubResource("23")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("6")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}, {
+"duration": 1.0,
+"texture": SubResource("13")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("126")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124")
+}],
+"loop": false,
+"name": &"to morph",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": false,
+"name": &"turn standing",
+"speed": 40.0
+}]
+
+[sub_resource type="AtlasTexture" id="25"]
+atlas = ExtResource("107")
+region = Rect2(0, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="26"]
+atlas = ExtResource("107")
+region = Rect2(48, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="27"]
+atlas = ExtResource("107")
+region = Rect2(96, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="28"]
+atlas = ExtResource("107")
+region = Rect2(144, 0, 48, 45)
+
+[sub_resource type="AtlasTexture" id="37"]
+atlas = ExtResource("105")
+region = Rect2(0, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="38"]
+atlas = ExtResource("105")
+region = Rect2(48, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="39"]
+atlas = ExtResource("105")
+region = Rect2(96, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="40"]
+atlas = ExtResource("105")
+region = Rect2(144, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="41"]
+atlas = ExtResource("105")
+region = Rect2(192, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="42"]
+atlas = ExtResource("105")
+region = Rect2(240, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="43"]
+atlas = ExtResource("105")
+region = Rect2(288, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="44"]
+atlas = ExtResource("105")
+region = Rect2(336, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="45"]
+atlas = ExtResource("105")
+region = Rect2(384, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="46"]
+atlas = ExtResource("105")
+region = Rect2(432, 0, 48, 44)
+
+[sub_resource type="AtlasTexture" id="29"]
+atlas = ExtResource("106")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="30"]
+atlas = ExtResource("106")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="31"]
+atlas = ExtResource("106")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="32"]
+atlas = ExtResource("106")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="33"]
+atlas = ExtResource("106")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="34"]
+atlas = ExtResource("106")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="35"]
+atlas = ExtResource("106")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="36"]
+atlas = ExtResource("106")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="47"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89")
+}],
+"loop": true,
+"name": &"aim side down run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36")
+}],
+"loop": true,
+"name": &"aim side up run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65")
+}],
+"loop": false,
+"name": &"aim up standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("71")
+}],
+"loop": false,
+"name": &"aim_side_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68")
+}],
+"loop": false,
+"name": &"aim_side_up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74")
+}],
+"loop": false,
+"name": &"crouch aim side down",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73")
+}],
+"loop": false,
+"name": &"crouch aim side up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67")
+}],
+"loop": false,
+"name": &"crouch aim up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56")
+}],
+"loop": false,
+"name": &"crouch turn",
+"speed": 35.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98")
+}],
+"loop": true,
+"name": &"death_0",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("95")
+}],
+"loop": false,
+"name": &"death_1",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("97")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96")
+}],
+"loop": false,
+"name": &"death_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("102")
+}],
+"loop": false,
+"name": &"falling",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102")
+}],
+"loop": false,
+"name": &"falling turn",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("123")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125")
+}],
+"loop": false,
+"name": &"from morph",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("25")
+}, {
+"duration": 1.0,
+"texture": SubResource("26")
+}, {
+"duration": 1.0,
+"texture": SubResource("27")
+}, {
+"duration": 1.0,
+"texture": SubResource("28")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("109")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122")
+}],
+"loop": true,
+"name": &"morph ball",
+"speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9")
+}],
+"loop": false,
+"name": &"neutral",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101")
+}],
+"loop": false,
+"name": &"rising",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("104")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101")
+}],
+"loop": false,
+"name": &"rising turn",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("37")
+}, {
+"duration": 1.0,
+"texture": SubResource("38")
+}, {
+"duration": 1.0,
+"texture": SubResource("39")
+}, {
+"duration": 1.0,
+"texture": SubResource("40")
+}, {
+"duration": 1.0,
+"texture": SubResource("41")
+}, {
+"duration": 1.0,
+"texture": SubResource("42")
+}, {
+"duration": 1.0,
+"texture": SubResource("43")
+}, {
+"duration": 1.0,
+"texture": SubResource("44")
+}, {
+"duration": 1.0,
+"texture": SubResource("45")
+}, {
+"duration": 1.0,
+"texture": SubResource("46")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("29")
+}, {
+"duration": 1.0,
+"texture": SubResource("30")
+}, {
+"duration": 1.0,
+"texture": SubResource("31")
+}, {
+"duration": 1.0,
+"texture": SubResource("32")
+}, {
+"duration": 1.0,
+"texture": SubResource("33")
+}, {
+"duration": 1.0,
+"texture": SubResource("34")
+}, {
+"duration": 1.0,
+"texture": SubResource("35")
+}, {
+"duration": 1.0,
+"texture": SubResource("36")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123")
+}],
+"loop": true,
+"name": &"to morph",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": false,
+"name": &"turn standing",
+"speed": 40.0
+}]
+
+[sub_resource type="RectangleShape2D" id="48"]
+size = Vector2(13.10028, 16.15564)
+
+[sub_resource type="Animation" id="49"]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteLeft:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0.266667), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteLeft:material:shader_parameter/active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"endHitstun"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteRight:material:shader_parameter/active")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteRight:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0.266667), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="50"]
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="51"]
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="52"]
+length = 2.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjtq3"]
+_data = {
+&"damage": SubResource("49"),
+&"death1": SubResource("50"),
+&"death2": SubResource("51"),
+&"death3": SubResource("52")
+}
+
+[node name="Samus" type="CharacterBody2D" unique_id=576505904]
+z_index = 10
+position = Vector2(-26.3491, 9.30898)
+collision_mask = 8
+script = ExtResource("2")
+
+[node name="SpriteLeft" type="AnimatedSprite2D" parent="." unique_id=874654732]
+material = SubResource("1")
+sprite_frames = SubResource("24")
+animation = &"idle"
+frame = 2
+
+[node name="SpriteRight" type="AnimatedSprite2D" parent="." unique_id=933779991]
+material = SubResource("1")
+position = Vector2(0, 6.69102)
+sprite_frames = SubResource("47")
+animation = &"crouch"
+frame = 1
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1047271025]
+z_index = 100
+position = Vector2(-0.022, 15)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("48")
+
+[node name="BulletPosition" type="Marker2D" parent="." unique_id=17761493]
+position = Vector2(-16.0464, 10.0152)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=704407097]
+visible = false
+z_index = -1
+
+editor_draw_limits = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1030330458]
+libraries/ = SubResource("AnimationLibrary_bjtq3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1881872027]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1718712087]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0)
+
+[node name="IFrameTimer" type="Timer" parent="." unique_id=170794247]
+wait_time = 1.5
+
+[node name="CeilingDetector" type="RayCast2D" parent="." unique_id=1219678505]
+position = Vector2(-7.6509, -9.30898)
+rotation = 3.14159
+collision_mask = 8
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1838687920]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1921454407]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=1049131346]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=247244258]
+
+[node name="ScreenShake" type="Node2D" parent="." unique_id=2091592200]
+position = Vector2(1.08069, 0)
+script = ExtResource("52")
+
+
+
+[connection signal="input_event" from="." to="." method="_on_Samus__power_input_event"]
+[connection signal="animation_finished" from="SpriteLeft" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="animation_finished" from="SpriteRight" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="IFrameTimer" to="." method="_on_IFrameTimer_timeout"]

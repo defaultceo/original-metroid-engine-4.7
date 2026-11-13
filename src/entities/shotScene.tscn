@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://7oae0myn4cil"]
+
+[ext_resource type="Texture2D" uid="uid://habsdn2vcr1y" path="res://assets/samus/standard shot impact.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxke1ra16pmxb" path="res://assets/samus/standard shot.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://wnur4wsqxq24" path="res://assets/other/super missile.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b4qug6man2655" path="res://assets/other/missile.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dhr2qkynsq5xm" path="res://assets/enemies/death explosion/1.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c1k4scaftdy7f" path="res://assets/enemies/death explosion/2.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bb47iopxwno3m" path="res://assets/enemies/death explosion/4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cs5rofpd43apk" path="res://assets/enemies/death explosion/5.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bwtewpqgjgc5s" path="res://assets/enemies/death explosion/6.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://moxmsagb120g" path="res://assets/enemies/death explosion/3.png" id="11"]
+
+[sub_resource type="GDScript" id="1"]
+script/source = "extends Area2D
+
+var bulletSpeed = 6
+var direction: String
+var action: Vector2
+var beamType: String
+var boost: Vector2
+var trailTime = 0.05
+const trail = preload(\"res://src/MissileTrail.tscn\")
+var sound = \"\"
+
+func setType(type):
+	beamType = type
+	
+	match beamType:
+		\"standard\": 
+			sound = preload(\"res://assets/sounds/samus/BaseShot.ogg\")
+			$Hitbox.position.x = 0
+			$Hitbox.shape.height = 4
+			$Hitbox.shape.radius = 9
+		\"missile\": sound = preload(\"res://assets/sounds/samus/Missile.ogg\")
+		\"super missile\": sound = preload(\"res://assets/sounds/samus/SMissile.ogg\")
+		
+	
+func momentumBoost(vel:Vector2):
+	boost = vel / 75
+
+func setDirection(dir):
+	direction = dir
+			
+	# set the action to be executed each frame based on the 'direction' variable
+	# rotate bullet if needed
+	match direction:
+		\"right\": 
+			action = Vector2(bulletSpeed, 0)
+			self.rotation_degrees = 180
+		\"left\": 
+			action = Vector2(-bulletSpeed, 0)
+		\"up\": 
+			action = Vector2(0, -bulletSpeed)
+			self.rotation_degrees = 90
+		\"down\": 
+			action = Vector2(0, bulletSpeed)
+			self.rotation_degrees = 270
+		
+		\"upright\": 
+			action = Vector2(bulletSpeed, -bulletSpeed)
+			self.rotation_degrees = 135
+				
+		\"upleft\": 
+			action = Vector2(-bulletSpeed, -bulletSpeed)
+			self.rotation_degrees = 45
+			
+		\"downleft\": 
+			action = Vector2(-bulletSpeed, bulletSpeed)
+			self.rotation_degrees = 315
+			
+		\"downright\": 
+			action = Vector2(bulletSpeed, bulletSpeed)
+			self.rotation_degrees = 225
+			
+	if (boost.x > 0 and action.x > 0) or (boost.x < 0 and action.x < 0):
+		action.x += boost.x
+			
+	if (boost.y > 0 and action.y > 0) or (boost.y < 0 and action.y < 0):
+		action.y += boost.y
+		
+
+func _ready():
+	
+	# crash the program if the action has not been set
+	if not action:
+		print(\"ERROR: Bullet's 'direction' variable was not set correctly\")
+		get_tree().quit()
+		
+	# begin the bullet's animation
+	$AnimatedSprite.play(beamType)
+		
+	# play sound
+	$AudioStreamPlayer.stream = sound
+	$AudioStreamPlayer.play()
+	
+	trailTime = 0.05
+
+func _physics_process(delta):
+	if direction != \"stop\":
+		# move the bullet based on the action set earlier
+		translate(action)
+		
+		if beamType == \"missile\" or beamType == \"super missile\":
+			if trailTime <= 0:
+				
+				var t = trail.instance()
+				
+				t.global_position = self.global_position
+				
+				get_parent().add_child(t)
+				trailTime = 0.05
+			else:
+				trailTime -= delta
+
+# kill bullet when it leaves the screen
+func _on_screen_exited():
+	killSelf()
+	
+func killSelf():
+	direction = \"stop\"
+	if $AudioStreamPlayer.playing:
+		for child in self.get_children():
+			if child != $AudioStreamPlayer:
+				child.queue_free()
+		
+		#yield($AudioStreamPlayer, \"finished\")
+		await $AudioStreamPlayer.finished
+	
+	queue_free()
+
+
+func _on_Standard_shot_body_entered(body):
+	
+	print(body.collision_layer)
+	
+	if beamType == \"super missile\":
+		get_parent().get_node(\"Samus/ScreenShake\").shakeScreen(1, 5)
+	
+	# play explosion animation and kill bullet when it collides with a world tile
+	if body.collision_layer == 8:
+		anim()
+
+	else:
+		if body.handleShot(beamType) is String:
+			if \"explode\":
+				anim()
+			else:
+				killSelf()
+		else:
+			killSelf()
+
+	
+
+func anim():
+	direction = \"stop\"
+		
+	self.rotation_degrees = 0
+	
+	$Hitbox.shape.height = 1
+	if beamType == \"standard\":
+		$AnimatedSprite.play(\"small explosion\")
+		
+		$Hitbox.shape.radius = 16
+	else:
+		$AnimatedSprite.play(\"large explosion\")
+	
+		$Hitbox.shape.radius = 30
+	#yield($AnimatedSprite, \"animation_finished\")
+	await $AnimatedSprite.animation_finished
+	
+	killSelf()
+"
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("2")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="7"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": 1,
+"name": &"large explosion",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": 0,
+"name": &"missile",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}],
+"loop": 0,
+"name": &"small explosion",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": 0,
+"name": &"standard",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": 0,
+"name": &"super missile",
+"speed": 0.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="8"]
+resource_local_to_scene = true
+radius = 5.0
+height = 10.0
+
+[node name="shotScene" type="Area2D" unique_id=750438333]
+z_index = 11
+collision_layer = 2
+collision_mask = 12
+script = SubResource("1")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1672108503]
+sprite_frames = SubResource("7")
+animation = &"missile"
+
+[node name="VisibilityNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=987655332]
+scale = Vector2(0.406569, 0.406569)
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=691941083]
+position = Vector2(-1.39217, 0)
+rotation = 1.5708
+scale = Vector2(0.407, 0.407)
+shape = SubResource("8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=542533835]
+
+[connection signal="body_entered" from="." to="." method="_on_Standard_shot_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_screen_exited"]
