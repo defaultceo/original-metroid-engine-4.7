@@ -59,3 +59,8 @@
 - Completed the door transition animation
 - Added a GLOBAL script
 
+##############################################
+
+## 13 nov 2026 (day lucky Friday?)
+
+- pushed main branch with 4.7 changes made locally
